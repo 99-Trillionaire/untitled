@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --main-purple: #c5bfe1;
+    --main-yellow: #f5ce5f;
+    --main-pink: #f46e9f;
+    --main-pink-lighter: #ef8db0;
+    --main-pink-darker: #e36692;
+    --main-blue: #9ecccd;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgb(255, 255, 255, 0) inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(64, 64, 64) !important;
+    -webkit-text-size-adjust: inherit !important;
+}
+
+body {
+    /*color: rgb(var(--foreground-rgb));*/
+    /*background: linear-gradient(*/
+    /*    to bottom,*/
+    /*    transparent,*/
+    /*    rgb(var(--background-end-rgb))*/
+    /*  )*/
+    /*  rgb(var(--background-start-rgb));*/
+    background: var(--main-yellow); /*fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, var(--main-purple), var(--main-blue)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, var(--main-purple), var(--main-blue)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(64, 64, 64);
+}
+
+input {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:disabled {
+    cursor: default;
+}
